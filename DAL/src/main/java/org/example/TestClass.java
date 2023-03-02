@@ -1,7 +1,7 @@
 package org.example;
 
 public class TestClass {
-    public String Name;
+    /*public String Name;
 
     public String getName() {
         return Name;
@@ -13,5 +13,5 @@ public class TestClass {
     public TestClass()
     {
         Name = "Test Name";
-    }
+    }*/
 }

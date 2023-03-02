@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>BLL</artifactId>
-    <name>PL</name>
+    <name>BLL</name>
 
     <dependencies>
         <!-- project dependencies -->

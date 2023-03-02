@@ -7,6 +7,8 @@ public class Initializer {
     Student student = new Student();
     ContactInfo contactInfo = new ContactInfo();
     public List<Student> studentsList = new ArrayList<>();
+
+
     public void addStudent(Student student)
     {
         studentsList.add(student);
@@ -23,8 +25,6 @@ public class Initializer {
     {
         initModels();
     }
-
-
     public List<Student> getStudents()
     {
         return studentsList;

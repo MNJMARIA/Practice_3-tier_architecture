@@ -3,6 +3,7 @@ package org.example;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Student {
     private int id;
@@ -13,6 +14,11 @@ public class Student {
     private History history;
 
     //public List<Student> studentsList = new ArrayList<>();/
+
+    public Student()
+    {
+
+    }
     public Student(int id, LocalDate createdDate, boolean isActive, String comment, ContactInfo contactInfo, History history) {
         this.id = id;
         this.createdDate = createdDate;
@@ -21,26 +27,10 @@ public class Student {
         this.contactInfo = contactInfo;
         this.history = history;
     }
-
-    public Student()
-    {}
-
-
-
     public LocalDate createdData(int year, int month, int day)
     {
         LocalDate data = LocalDate.of(year, month, day);
         return data;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id +
-                "\tcreatedDate: " + createdDate +
-                "\tisActive: " + isActive +
-                "\tcomment: " + comment  +
-                "\tcontactInfo: " + contactInfo +
-                "\thistory: " + history + "\n";
     }
 
     public int getId() {
@@ -83,5 +73,28 @@ public class Student {
     }
     public void setHistory(History history) {
         this.history = history;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return id == student.id && isActive == student.isActive && Objects.equals(createdDate, student.createdDate) && Objects.equals(comment, student.comment) && Objects.equals(contactInfo, student.contactInfo) && Objects.equals(history, student.history);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, createdDate, isActive, comment, contactInfo, history);
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                "\tcreatedDate: " + createdDate +
+                "\tisActive: " + isActive +
+                "\tcomment: " + comment  +
+                "\tcontactInfo: " + contactInfo +
+                "\thistory: " + history + "\n";
     }
 }
