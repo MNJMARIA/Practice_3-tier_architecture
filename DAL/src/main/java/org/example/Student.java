@@ -43,6 +43,7 @@ public class Student {
     public LocalDate getCreatedDate() {
         return createdDate;
     }
+
     public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
     }
