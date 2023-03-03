@@ -1,8 +1,6 @@
 package org.example;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Student {
@@ -91,11 +89,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "ID: " + id +
-                "\tcreatedDate: " + createdDate +
-                "\tisActive: " + isActive +
-                "\tcomment: " + comment  +
-                "\tcontactInfo: " + contactInfo +
-                "\thistory: " + history + "\n";
+        return "---STUDENT---" +
+                "\nID: " + getId() +
+                "\nCREATED DATE: " + getCreatedDate() +
+                "\nIS ACTIVE: " + isActive() +
+                "\nCOMMENT: " + getComment() +
+                "\nCONTACT INFO: " + getContactInfo() +
+                "\nHISTORY: " + getHistory() + "\n";
     }
 }

@@ -6,11 +6,12 @@ public class GetAllStudent {
     {
         for(Student std: studentsService.GetAllStudent())
         {
-            System.out.println(std.getContactInfo().getFirstName() + "\n" +
+            System.out.println();
+            System.out.print(std.getContactInfo().getFirstName() + "\n" +
                     std.getContactInfo().getLastName() + "\n" +
                     std.getContactInfo().getMiddleName() + "\n");
-
             System.out.println(std.getHistory().getCourses().getName());
+            System.out.println(std);
         }
     }
 }

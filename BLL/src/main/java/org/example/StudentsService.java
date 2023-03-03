@@ -9,6 +9,4 @@ public class StudentsService {
         initializer.init();
         return initializer.getStudents();
     }
-
-
 }

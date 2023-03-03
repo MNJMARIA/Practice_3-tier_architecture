@@ -100,14 +100,13 @@ public class ContactInfo {
 
     @Override
     public String toString() {
-        return "Contact Info: " +
-                "id: " + id +
-                ", firstName: " + firstName + ';' +
-                ", lastName: " + lastName + ';' +
-                ", middleName: " + middleName + ';' +
-                ", birthdate: " + birthdate + ';' +
-                ", email: " + email + ';' +
-                ", phone: " + phone + '.';
+        return "id = " + id +
+                ", firstName = " + firstName +
+                ", lastName = " + lastName +
+                ", middleName = " + middleName +
+                ", \nbirthdate = " + birthdate +
+                ", email = " + email +
+                ", phone = " + phone + '.';
     }
 }
 
