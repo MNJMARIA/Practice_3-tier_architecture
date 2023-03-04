@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Coach {
     private int id;
     private ContactInfo contactInfo;
-    private Course courses;
+    private Course course;
     private History history;
 
     public Coach()
@@ -13,10 +13,10 @@ public class Coach {
 
     }
 
-    public Coach(int id, ContactInfo contactInfo, Course courses, History history) {
+    public Coach(int id, ContactInfo contactInfo, Course course, History history) {
         this.id = id;
         this.contactInfo = contactInfo;
-        this.courses = courses;
+        this.course = course;
         this.history = history;
     }
 
@@ -37,11 +37,11 @@ public class Coach {
     }
 
     public Course getCourses() {
-        return courses;
+        return course;
     }
 
-    public void setCourses(Course courses) {
-        this.courses = courses;
+    public void setCourses(Course course) {
+        this.course = course;
     }
 
     public History getHistory() {
@@ -59,13 +59,13 @@ public class Coach {
         Coach coach = (Coach) o;
         return id == coach.id
                 && Objects.equals(contactInfo, coach.contactInfo)
-                && Objects.equals(courses, coach.courses)
+                && Objects.equals(course, coach.course)
                 && Objects.equals(history, coach.history);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, contactInfo, courses, history);
+        return Objects.hash(id, contactInfo, course, history);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class Coach {
         return "---COACH--- " +
                 "\nID: " + id +
                 "\nCONTACT INFO: " + contactInfo +
-                "\nCOURSES: " + courses +
+                "\nCOURSE: " + course +
                 "\nHISTORY:" + history;
     }
 }
