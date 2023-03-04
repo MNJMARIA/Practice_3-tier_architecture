@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class History {
     private int id;
-    private Course courses;
+    private Course course;
 
     public History()
     {
 
     }
-    public History(int id, Course courses) {
+    public History(int id, Course course) {
         this.id = id;
-        this.courses = courses;
+        this.course = course;
     }
 
     public int getId() {
@@ -23,10 +23,10 @@ public class History {
     }
 
     public Course getCourses() {
-        return courses;
+        return course;
     }
-    public void setCourses(Course courses) {
-        this.courses = courses;
+    public void setCourses(Course course) {
+        this.course = course;
     }
 
     @Override
@@ -34,17 +34,17 @@ public class History {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         History history = (History) o;
-        return id == history.id && Objects.equals(courses, history.courses);
+        return id == history.id && Objects.equals(course, history.course);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, courses);
+        return Objects.hash(id, course);
     }
 
     @Override
     public String toString() {
         return "id = " + id +
-                "; course: " + courses + '.';
+                "; course: " + course + '.';
     }
 }
