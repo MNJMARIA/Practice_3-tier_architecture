@@ -1,12 +1,33 @@
 package org.example;
 
+import org.example.Repositories.CoachRepository;
+
 import java.util.List;
 
 public class CoachService {
     Initializer initializer = new Initializer();
-    public List<Coach> GetAllCoaches()
+    private CoachRepository coachRepository = new CoachRepository();
+
+    public List<Coach> getAll()
     {
-        initializer.init();
-        return initializer.getCoach();
+        coachRepository.init();
+        return coachRepository.getAll();
     }
+    public void getBy(int id)
+    {
+        coachRepository.getBy(id);
+    }
+    public void create(Coach coach)
+    {
+        coachRepository.create(coach);
+    }
+    public void update(int id, Coach coach)
+    {
+        coachRepository.update(id, coach);
+    }
+    public void delete(int id)
+    {
+        coachRepository.delete(id);
+    }
+
 }

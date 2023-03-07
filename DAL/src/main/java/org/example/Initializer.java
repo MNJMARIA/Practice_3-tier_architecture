@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Initializer {
-    Student std = new Student();
-    ContactInfo contactInfo = new ContactInfo();
+    private Student std = new Student();
+    private ContactInfo contactInfo = new ContactInfo();
     private List<Student> studentsList = new ArrayList<>();
     private List<Coach> coachList = new ArrayList<>();
 
