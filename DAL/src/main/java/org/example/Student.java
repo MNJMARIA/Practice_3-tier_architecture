@@ -11,8 +11,6 @@ public class Student {
     private ContactInfo contactInfo;
     private History history;
 
-    //public List<Student> studentsList = new ArrayList<>();/
-
     public Student()
     {
 

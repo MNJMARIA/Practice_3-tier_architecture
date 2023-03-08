@@ -24,9 +24,7 @@ public class Initializer {
                 new ContactInfo(1, "Maria", "Stepanova", "Oleksandrivna",
                 contactInfo.birthData(2005,8,4 ), "mariastepanova@kitu.nau.edu.ua", "380998882828"),
                 new History(1, new Course(1, "Java", 12346, 1))));
-        /*addStudent(new Student(std.setId(1), std.createdData(2022,10,4), std.setActive(true), std.setComment("hard learner"),
-                new ContactInfo(1, "Maria", "Stepanova", "Oleksandrivna", contactInfo.birthData(2005,8,4 ), "mariastepanova@kitu.nau.edu.ua", "380998882828"),
-                new History(1, new Course(1, "Java", 12346, 1))));*/
+
        addCoach(new Coach( 1, new ContactInfo(2, "Oleg", "Ivanov", "Petrovich",
                 contactInfo.birthData(1980, 9,18), "olegivanov@gmail.com", "380923652323"),
                 new Course(2, "Java", 12346, 56),

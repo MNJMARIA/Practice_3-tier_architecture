@@ -2,7 +2,6 @@ package org.example.Repositories;
 
 import org.example.Coach;
 import org.example.Initializer;
-import org.example.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,12 @@ public class CoachRepository {
     }
     public Coach getBy(int id)
     {
-        return coachList.get(id);
+        for (Coach coach : coachList) {
+            if (coach.getId() == id) {
+                return coach;
+            }
+        }
+        return null;
     }
     public void create(Coach coach)
     {

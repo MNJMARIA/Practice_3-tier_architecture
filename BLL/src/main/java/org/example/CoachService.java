@@ -5,17 +5,19 @@ import org.example.Repositories.CoachRepository;
 import java.util.List;
 
 public class CoachService {
-    Initializer initializer = new Initializer();
-    private CoachRepository coachRepository = new CoachRepository();
+    private static CoachRepository coachRepository = new CoachRepository();
+
+    static {
+        coachRepository.init();
+    }
 
     public List<Coach> getAll()
     {
-        coachRepository.init();
         return coachRepository.getAll();
     }
-    public void getBy(int id)
+    public Coach getBy(int id)
     {
-        coachRepository.getBy(id);
+        return coachRepository.getBy(id);
     }
     public void create(Coach coach)
     {

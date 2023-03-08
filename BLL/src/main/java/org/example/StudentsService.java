@@ -5,19 +5,17 @@ import org.example.Repositories.StudentRepository;
 import java.util.List;
 
 public class StudentsService {
-    private Initializer initializer = new Initializer();
     private static StudentRepository studentRepository = new StudentRepository();
     static {
         studentRepository.init();
     }
     public List<Student> getAll()
     {
-
         return studentRepository.getAll();
     }
-    public void getBy(int id)
+    public Student getBy(int id)
     {
-        studentRepository.getBy(id);
+        return studentRepository.getBy(id);
     }
     public void create(Student student)
     {

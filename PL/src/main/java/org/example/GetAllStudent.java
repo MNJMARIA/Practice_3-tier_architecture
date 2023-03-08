@@ -13,7 +13,7 @@ public class GetAllStudent {
     }
     public void getStdBy()
     {
-        studentsService.getBy(2);
+        System.out.println(studentsService.getBy(2));
     }
     public void createStd()
     {
