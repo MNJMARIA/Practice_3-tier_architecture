@@ -6,11 +6,13 @@ import java.util.List;
 
 public class StudentsService {
     private Initializer initializer = new Initializer();
-    private StudentRepository studentRepository = new StudentRepository();
-
+    private static StudentRepository studentRepository = new StudentRepository();
+    static {
+        studentRepository.init();
+    }
     public List<Student> getAll()
     {
-        studentRepository.init();
+
         return studentRepository.getAll();
     }
     public void getBy(int id)

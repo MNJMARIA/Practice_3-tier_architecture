@@ -6,9 +6,9 @@ public class GetAllStudent {
     private StudentsService studentsService = new StudentsService();
     public void displayStudents()
     {
-        for(Student std: studentsService.getAll())
+        for(Student student: studentsService.getAll())
         {
-            System.out.println(std);
+            System.out.println(student);
         }
     }
     public void getStdBy()
@@ -32,6 +32,6 @@ public class GetAllStudent {
 
    public void deleteStd()
    {
-       studentsService.delete(1);
+       studentsService.delete(3);
    }
 }
