@@ -49,7 +49,6 @@ public class StudentRepository implements IRepository<Student> {
                 break;
             }
         }
-
     }
 
     @Override
