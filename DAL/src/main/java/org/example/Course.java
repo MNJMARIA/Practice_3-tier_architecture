@@ -12,15 +12,12 @@ public class Course {
     {
 
     }
-
     public Course(int id, String name, double price, int lessonCount) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.lessonCount = lessonCount;
     }
-
-
 
     public int getId() {
         return id;

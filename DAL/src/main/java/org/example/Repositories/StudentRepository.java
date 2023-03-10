@@ -5,7 +5,7 @@ import org.example.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentRepository {
+public class StudentRepository implements IRepository<Student> {
     private List<Student> studentsList = new ArrayList<>();
     private Initializer initializer = new Initializer();
 
@@ -15,10 +15,13 @@ public class StudentRepository {
         studentsList = initializer.getStudents();
     }
 
+    @Override
     public List<Student> getAll()
     {
         return studentsList;
     }
+
+    @Override
     public Student getBy(int id)
     {
         for (Student student : studentsList) {
@@ -28,10 +31,15 @@ public class StudentRepository {
         }
         return null;
     }
+
+
+    @Override
     public void create(Student student)
     {
         studentsList.add(student);
     }
+
+    @Override
     public void update(int id, Student student)
     {
         for (int i = 0; i < studentsList.size(); i++) {
@@ -43,6 +51,8 @@ public class StudentRepository {
         }
 
     }
+
+    @Override
     public void delete(int id)
     {
         for (int i = 0; i < studentsList.size(); i++) {
@@ -54,3 +64,5 @@ public class StudentRepository {
         }
     }
 }
+
+

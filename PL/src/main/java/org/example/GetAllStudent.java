@@ -3,7 +3,8 @@ package org.example;
 public class GetAllStudent {
     private Student std = new Student();
     private ContactInfo contactInfo = new ContactInfo();
-    private StudentsService studentsService = new StudentsService();
+    private IService<Student> studentsService = new StudentService();
+
     public void displayStudents()
     {
         for(Student student: studentsService.getAll())
