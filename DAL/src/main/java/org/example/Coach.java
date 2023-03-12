@@ -36,11 +36,11 @@ public class Coach {
         this.contactInfo = contactInfo;
     }
 
-    public Course getCourses() {
+    public Course getCourse() {
         return course;
     }
 
-    public void setCourses(Course course) {
+    public void setCourse(Course course) {
         this.course = course;
     }
 
