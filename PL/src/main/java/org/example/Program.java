@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        GetAllStudent getAllStudent = new GetAllStudent();
-        GetAllCoach getAllCoach = new GetAllCoach();
+        AllStudentFunctions studentFunctions = new AllStudentFunctions();
+        AllCoachFunctions coachFunctions = new AllCoachFunctions();
 
         int choice;
         do {
@@ -29,42 +29,42 @@ public class Program {
             switch (choice) {
                 case 1:
                     System.out.println("All students: ");
-                    getAllStudent.displayStudents();
+                    studentFunctions.displayStudents();
                     break;
                 case 2:
                     System.out.println("All coaches: ");
-                    getAllCoach.displayCoach();
+                    coachFunctions.displayCoach();
                     break;
                 case 3:
                     System.out.println("Get student: ");
-                    getAllStudent.getStdBy();
+                    studentFunctions.getStdBy();
                     break;
                 case 4:
                     System.out.println("Get coach: ");
-                    getAllCoach.getCoachBy();
+                    coachFunctions.getCoachBy();
                     break;
                 case 5:
-                    getAllStudent.createStd();
+                    studentFunctions.createStd();
                     System.out.println("Student is created");
                     break;
                 case 6:
-                    getAllCoach.createCoach();
+                    coachFunctions.createCoach();
                     System.out.println("Coach is created");
                     break;
                 case 7:
-                    getAllStudent.updateStd();
+                    studentFunctions.updateStd();
                     System.out.println("Student is updated");
                     break;
                 case 8:
-                    getAllCoach.updateCoach();
+                    coachFunctions.updateCoach();
                     System.out.println("Coach is updated");
                     break;
                 case 9:
-                    getAllStudent.deleteStd();
+                    studentFunctions.deleteStd();
                     System.out.println("Student is deleted");
                     break;
                 case 10:
-                    getAllCoach.deleteCoach();
+                    coachFunctions.deleteCoach();
                     System.out.println("Coach is deleted");
                     break;
                 case 11:

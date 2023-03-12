@@ -1,6 +1,6 @@
 package org.example;
 
-public class GetAllCoach {
+public class AllCoachFunctions {
     private ContactInfo contactInfo = new ContactInfo();
     private IService<Coach> coachService = new CoachService();
     public void displayCoach()

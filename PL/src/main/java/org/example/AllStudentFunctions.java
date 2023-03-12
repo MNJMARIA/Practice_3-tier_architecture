@@ -1,6 +1,6 @@
 package org.example;
 
-public class GetAllStudent {
+public class AllStudentFunctions {
     private Student std = new Student();
     private ContactInfo contactInfo = new ContactInfo();
     private IService<Student> studentsService = new StudentService();
@@ -31,8 +31,8 @@ public class GetAllStudent {
                 new History(3, new Course(3, "Java", 12346, 1))));
     }
 
-   public void deleteStd()
-   {
-       studentsService.delete(3);
-   }
+    public void deleteStd()
+    {
+        studentsService.delete(3);
+    }
 }
